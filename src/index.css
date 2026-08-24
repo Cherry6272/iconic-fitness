@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+@theme {
+  --color-dark-950: #050506;
+  --color-dark-900: #09090b;
+  --color-dark-850: #121216;
+  --color-dark-800: #18181f;
+  --color-dark-700: #24242e;
+  --color-dark-600: #343444;
+
+  --color-accent: #CCFF00;
+  --color-accent-hover: #DBFF33;
+  --color-accent-muted: #8CAE00;
+
+  --font-display: "Space Grotesk", sans-serif;
+  --font-sans: "Inter", sans-serif;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-dark-900);
+    color: #e4e4e7;
+    font-family: var(--font-sans);
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+    color: #ffffff;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #09090b;
+}
+::-webkit-scrollbar-thumb {
+  background: #24242e;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #CCFF00;
+}
+
+/* Film Grain Noise Texture Overlay */
+.bg-noise {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.03'/%3E%3C/svg%3E");
+}
+
+/* Hero Gradient */
+.bg-hero-gradient {
+  background: linear-gradient(180deg, rgba(9,9,11,0.3) 0%, rgba(9,9,11,0.85) 70%, rgba(9,9,11,1) 100%);
+}
+
+/* Glassmorphism utility */
+.glass-panel {
+  background: rgba(18, 18, 22, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.glass-panel-accent {
+  background: rgba(18, 18, 22, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(204, 255, 0, 0.25);
+}
+
+/* Custom Glow Effects */
+.glow-accent {
+  box-shadow: 0 0 35px rgba(204, 255, 0, 0.2);
+}
+
+.glow-accent-sm {
+  box-shadow: 0 0 15px rgba(204, 255, 0, 0.15);
+}
+
+/* Hide scrollbar for clean horizontal scrollers */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

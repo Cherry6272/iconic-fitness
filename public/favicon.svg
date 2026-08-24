@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- Dark Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#141419"/>
+      <stop offset="50%" stop-color="#09090b"/>
+      <stop offset="100%" stop-color="#030304"/>
+    </linearGradient>
+
+    <!-- Electric Acid Lime Accent Gradient -->
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E5FF66"/>
+      <stop offset="50%" stop-color="#CCFF00"/>
+      <stop offset="100%" stop-color="#99CC00"/>
+    </linearGradient>
+
+    <!-- Metallic/Chrome Barbell Shaft Gradient -->
+    <linearGradient id="metalGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="35%" stop-color="#E4E4E7"/>
+      <stop offset="70%" stop-color="#A1A1AA"/>
+      <stop offset="100%" stop-color="#52525B"/>
+    </linearGradient>
+
+    <!-- Dark Weight Plate Gradient -->
+    <linearGradient id="plateGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#27272A"/>
+      <stop offset="50%" stop-color="#18181B"/>
+      <stop offset="100%" stop-color="#09090B"/>
+    </linearGradient>
+
+    <!-- Soft Neon Glow Effect -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="12" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Base Squircle Container -->
+  <rect x="16" y="16" width="480" height="480" rx="110" fill="url(#bgGrad)"/>
+  <rect x="16" y="16" width="480" height="480" rx="110" fill="none" stroke="#CCFF00" stroke-width="8" stroke-opacity="0.35"/>
+  <rect x="24" y="24" width="464" height="464" rx="102" fill="none" stroke="#CCFF00" stroke-width="2" stroke-opacity="0.15"/>
+
+  <!-- Geometric Hexagon Crest Accent in Background -->
+  <polygon points="256,68 412,158 412,354 256,444 100,354 100,158" fill="none" stroke="url(#accentGrad)" stroke-width="6" stroke-opacity="0.22" stroke-dasharray="16 10"/>
+
+  <!-- Center Fitness Dumbbell Group (Angled -45deg) -->
+  <g transform="rotate(-45 256 256)">
+    <!-- Neon Glow Underlayer -->
+    <g filter="url(#glow)" opacity="0.65">
+      <rect x="90" y="242" width="332" height="28" rx="8" fill="#CCFF00"/>
+      <rect x="110" y="140" width="36" height="232" rx="12" fill="#CCFF00"/>
+      <rect x="154" y="168" width="32" height="176" rx="10" fill="#CCFF00"/>
+      <rect x="326" y="168" width="32" height="176" rx="10" fill="#CCFF00"/>
+      <rect x="366" y="140" width="36" height="232" rx="12" fill="#CCFF00"/>
+    </g>
+
+    <!-- Main Metallic Bar -->
+    <rect x="90" y="244" width="332" height="24" rx="6" fill="url(#metalGrad)"/>
+
+    <!-- Center Handle Grip -->
+    <rect x="210" y="234" width="92" height="44" rx="6" fill="url(#plateGrad)" stroke="url(#accentGrad)" stroke-width="3"/>
+    <!-- Knurling Lines on Grip -->
+    <line x1="226" y1="236" x2="226" y2="276" stroke="#CCFF00" stroke-width="2.5" stroke-opacity="0.85"/>
+    <line x1="241" y1="236" x2="241" y2="276" stroke="#CCFF00" stroke-width="2.5" stroke-opacity="0.85"/>
+    <line x1="256" y1="236" x2="256" y2="276" stroke="#CCFF00" stroke-width="2.5" stroke-opacity="0.85"/>
+    <line x1="271" y1="236" x2="271" y2="276" stroke="#CCFF00" stroke-width="2.5" stroke-opacity="0.85"/>
+    <line x1="286" y1="236" x2="286" y2="276" stroke="#CCFF00" stroke-width="2.5" stroke-opacity="0.85"/>
+
+    <!-- Bar Collars -->
+    <rect x="188" y="226" width="16" height="60" rx="4" fill="url(#metalGrad)"/>
+    <rect x="308" y="226" width="16" height="60" rx="4" fill="url(#metalGrad)"/>
+
+    <!-- Inner Weight Plates (Medium) -->
+    <!-- Left Inner Plate -->
+    <rect x="152" y="168" width="32" height="176" rx="8" fill="url(#plateGrad)" stroke="url(#accentGrad)" stroke-width="3"/>
+    <rect x="158" y="176" width="6" height="160" rx="3" fill="#CCFF00" opacity="0.95"/>
+    <!-- Right Inner Plate -->
+    <rect x="328" y="168" width="32" height="176" rx="8" fill="url(#plateGrad)" stroke="url(#accentGrad)" stroke-width="3"/>
+    <rect x="350" y="176" width="6" height="160" rx="3" fill="#CCFF00" opacity="0.95"/>
+
+    <!-- Outer Heavy Weight Plates (Large) -->
+    <!-- Left Outer Plate -->
+    <rect x="110" y="140" width="36" height="232" rx="10" fill="url(#plateGrad)" stroke="url(#accentGrad)" stroke-width="4"/>
+    <rect x="116" y="150" width="8" height="212" rx="4" fill="#CCFF00"/>
+    <rect x="130" y="150" width="4" height="212" rx="2" fill="#FFFFFF" opacity="0.5"/>
+    
+    <!-- Right Outer Plate -->
+    <rect x="366" y="140" width="36" height="232" rx="10" fill="url(#plateGrad)" stroke="url(#accentGrad)" stroke-width="4"/>
+    <rect x="388" y="150" width="8" height="212" rx="4" fill="#CCFF00"/>
+    <rect x="378" y="150" width="4" height="212" rx="2" fill="#FFFFFF" opacity="0.5"/>
+
+    <!-- Bar End Caps -->
+    <rect x="92" y="238" width="14" height="36" rx="4" fill="url(#metalGrad)"/>
+    <rect x="406" y="238" width="14" height="36" rx="4" fill="url(#metalGrad)"/>
+  </g>
+
+  <!-- Athletic Energy Accent Dots & Lines -->
+  <path d="M 126 122 L 158 90 M 386 390 L 418 358" stroke="#CCFF00" stroke-width="6" stroke-linecap="round" opacity="0.8"/>
+  <circle cx="256" cy="74" r="7" fill="#CCFF00"/>
+  <circle cx="256" cy="438" r="7" fill="#CCFF00"/>
+</svg>
